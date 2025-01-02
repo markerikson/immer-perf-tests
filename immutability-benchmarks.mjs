@@ -12,20 +12,25 @@ import {create as produceMutative} from "mutative";
 import {produce as produceMutativeCompat, setAutoFreeze as setAutoFreezeMutativeCompat} from "mutative-compat";
 import {bench, run, group, summary} from "mitata"
 
-const initialState = {
-	largeArray: Array.from({length: 1000}, (_, i) => ({
-		id: i,
-		value: Math.random(),
-		nested: {key: `key-${i}`, data: Math.random()},
-		moreNested: {
-			items: Array.from({length: 100}, (_, i) => ({id: i, name: String(i)}))
-		}
-	})),
-	otherData: Array.from({length: 1000}, (_, i) => ({
-		id: i,
-		name: `name-${i}`,
-		isActive: i % 2 === 0
-	}))
+
+
+function createInitialState() {
+  const initialState = {
+    largeArray: Array.from({length: 10000}, (_, i) => ({
+      id: i,
+      value: Math.random(),
+      nested: {key: `key-${i}`, data: Math.random()},
+      moreNested: {
+        items: Array.from({length: 100}, (_, i) => ({id: i, name: String(i)}))
+      }
+    })),
+    otherData: Array.from({length: 10000}, (_, i) => ({
+      id: i,
+      name: `name-${i}`,
+      isActive: i % 2 === 0
+    }))
+  }
+  return initialState;
 }
 
 const MAX = 1
@@ -76,7 +81,7 @@ const setAutoFreezes = {
   mutativeCompat: setAutoFreezeMutativeCompat
 }
 
-const vanillaReducer = (state = initialState, action) => {
+const vanillaReducer = (state = createInitialState(), action) => {
 	switch (action.type) {
 		case "test/addItem":
 			return {
@@ -106,8 +111,9 @@ const vanillaReducer = (state = initialState, action) => {
 			}
     }
 		case "test/concatArray": {
+      const length = state.largeArray.length
 			const newArray = action.payload.concat(state.largeArray)
-			newArray.length = initialState.largeArray.length
+			newArray.length = length
 			return {
 				...state,
 				largeArray: newArray
@@ -119,7 +125,7 @@ const vanillaReducer = (state = initialState, action) => {
 }
 
 const createImmerReducer = (produce) => {
-  const immerReducer = (state = initialState, action) =>
+  const immerReducer = (state = createInitialState(), action) =>
     produce(state, draft => {
       switch (action.type) {
         case "test/addItem":
@@ -137,8 +143,9 @@ const createImmerReducer = (produce) => {
           break
         }
         case "test/concatArray": {
+          const length = state.largeArray.length
           const newArray = action.payload.concat(state.largeArray)
-          newArray.length = initialState.largeArray.length
+          newArray.length = length
           draft.largeArray = newArray
           break
         }
@@ -168,6 +175,8 @@ function createBenchmarks() {
         const version = args.get("version")
         const freeze = args.get("freeze")
         const action = args.get("action")
+
+        const initialState = createInitialState()
   
         function benchMethod() {
           setAutoFreezes[version](freeze)
