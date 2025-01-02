@@ -1,0 +1,158 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      cross-env:
+        specifier: ^7.0.3
+        version: 7.0.3
+      immer:
+        specifier: ^10.1.1
+        version: 10.1.1
+      immer10:
+        specifier: npm:immer@10
+        version: immer@10.1.1
+      immer10Each:
+        specifier: file:.yalc/immer
+        version: immer@file:.yalc/immer
+      immer5:
+        specifier: npm:immer@5
+        version: immer@5.3.6
+      immer6:
+        specifier: npm:immer@6
+        version: immer@6.0.9
+      immer7:
+        specifier: npm:immer@7
+        version: immer@7.0.15
+      immer8:
+        specifier: npm:immer@8
+        version: immer@8.0.4
+      immer9:
+        specifier: npm:immer@9
+        version: immer@9.0.21
+      mitata:
+        specifier: ^1.0.25
+        version: 1.0.25
+      mutative:
+        specifier: ^1.1.0
+        version: 1.1.0
+      mutative-compat:
+        specifier: ^0.1.2
+        version: 0.1.2(mutative@1.1.0)
+
+packages:
+
+  cross-env@7.0.3:
+    resolution: {integrity: sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==}
+    engines: {node: '>=10.14', npm: '>=6', yarn: '>=1'}
+    hasBin: true
+
+  cross-spawn@7.0.6:
+    resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
+    engines: {node: '>= 8'}
+
+  immer@10.1.1:
+    resolution: {integrity: sha512-s2MPrmjovJcoMaHtx6K11Ra7oD05NT97w1IC5zpMkT6Atjr7H8LjaDd81iIxUYpMKSRRNMJE703M1Fhr/TctHw==}
+
+  immer@5.3.6:
+    resolution: {integrity: sha512-pqWQ6ozVfNOUDjrLfm4Pt7q4Q12cGw2HUZgry4Q5+Myxu9nmHRkWBpI0J4+MK0AxbdFtdMTwEGVl7Vd+vEiK+A==}
+
+  immer@6.0.9:
+    resolution: {integrity: sha512-SyCYnAuiRf67Lvk0VkwFvwtDoEiCMjeamnHvRfnVDyc7re1/rQrNxuL+jJ7lA3WvdC4uznrvbmm+clJ9+XXatg==}
+
+  immer@7.0.15:
+    resolution: {integrity: sha512-yM7jo9+hvYgvdCQdqvhCNRRio0SCXc8xDPzA25SvKWa7b1WVPjLwQs1VYU5JPXjcJPTqAa5NP5dqpORGYBQ2AA==}
+
+  immer@8.0.4:
+    resolution: {integrity: sha512-jMfL18P+/6P6epANRvRk6q8t+3gGhqsJ9EuJ25AXE+9bNTYtssvzeYbEd0mXRYWCmmXSIbnlpz6vd6iJlmGGGQ==}
+
+  immer@9.0.21:
+    resolution: {integrity: sha512-bc4NBHqOqSfRW7POMkHd51LvClaeMXpm8dx0e8oE2GORbq5aRK7Bxl4FyzVLdGtLmvLKL7BTDBG5ACQm4HWjTA==}
+
+  immer@file:.yalc/immer:
+    resolution: {directory: .yalc/immer, type: directory}
+
+  isexe@2.0.0:
+    resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
+
+  mitata@1.0.25:
+    resolution: {integrity: sha512-0v5qZtVW5vwj9FDvYfraR31BMDcRLkhSFWPTLaxx/Z3/EvScfVtAAWtMI2ArIbBcwh7P86dXh0lQWKiXQPlwYA==}
+
+  mutative-compat@0.1.2:
+    resolution: {integrity: sha512-XF+l3jkY4XGZ2IZzdkS0tu0DtYsKJZcSQcoxHu+gvHkNWS1Xd+B4yOLqbhFAx46jzuB4BWIN/SoXB1E5yDAKjg==}
+    peerDependencies:
+      mutative: ^1.0.0
+
+  mutative@1.1.0:
+    resolution: {integrity: sha512-2PJADREjOusk3iJkD3rXV2YjAxTuaLxdfqtqTEt6vcY07LtEBR1seHuBHXWEIuscqRDGvbauYPs+A4Rj/KTczQ==}
+    engines: {node: '>=14.0'}
+
+  path-key@3.1.1:
+    resolution: {integrity: sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q==}
+    engines: {node: '>=8'}
+
+  shebang-command@2.0.0:
+    resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
+    engines: {node: '>=8'}
+
+  shebang-regex@3.0.0:
+    resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
+    engines: {node: '>=8'}
+
+  which@2.0.2:
+    resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
+    engines: {node: '>= 8'}
+    hasBin: true
+
+snapshots:
+
+  cross-env@7.0.3:
+    dependencies:
+      cross-spawn: 7.0.6
+
+  cross-spawn@7.0.6:
+    dependencies:
+      path-key: 3.1.1
+      shebang-command: 2.0.0
+      which: 2.0.2
+
+  immer@10.1.1: {}
+
+  immer@5.3.6: {}
+
+  immer@6.0.9: {}
+
+  immer@7.0.15: {}
+
+  immer@8.0.4: {}
+
+  immer@9.0.21: {}
+
+  immer@file:.yalc/immer: {}
+
+  isexe@2.0.0: {}
+
+  mitata@1.0.25: {}
+
+  mutative-compat@0.1.2(mutative@1.1.0):
+    dependencies:
+      mutative: 1.1.0
+
+  mutative@1.1.0: {}
+
+  path-key@3.1.1: {}
+
+  shebang-command@2.0.0:
+    dependencies:
+      shebang-regex: 3.0.0
+
+  shebang-regex@3.0.0: {}
+
+  which@2.0.2:
+    dependencies:
+      isexe: 2.0.0

@@ -1,0 +1,23 @@
+{
+  "name": "immer-perf-tests",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node --expose-gc immutability-benchmarks.mjs"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "immer": "^10.1.1",
+    "immer10": "npm:immer@10",
+    "immer10Each": "file:.yalc/immer",
+    "immer5": "npm:immer@5",
+    "immer6": "npm:immer@6",
+    "immer7": "npm:immer@7",
+    "immer8": "npm:immer@8",
+    "immer9": "npm:immer@9",
+    "mitata": "^1.0.25",
+    "mutative": "^1.1.0",
+    "mutative-compat": "^0.1.2"
+  }
+}

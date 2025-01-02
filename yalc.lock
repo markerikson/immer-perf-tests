@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "packages": {
+    "immer": {
+      "signature": "998574a48296d02639639e865732cde8",
+      "file": true,
+      "replaced": "^10.1.1"
+    }
+  }
+}
