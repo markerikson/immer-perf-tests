@@ -10,6 +10,7 @@
     "cross-env": "^7.0.3",
     "immer": "^10.1.1",
     "immer10": "npm:immer@10",
+    "immer10Each": "file:.yalc/immer",
     "immer5": "npm:immer@5",
     "immer6": "npm:immer@6",
     "immer7": "npm:immer@7",

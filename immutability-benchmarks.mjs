@@ -7,6 +7,7 @@ import {produce as produce7, setAutoFreeze as setAutoFreeze7} from "immer7"
 import {produce as produce8, setAutoFreeze as setAutoFreeze8} from "immer8"
 import {produce as produce9, setAutoFreeze as setAutoFreeze9} from "immer9"
 import {produce as produce10, setAutoFreeze as setAutoFreeze10} from "immer10"
+import {produce as produce10Each, setAutoFreeze as setAutoFreeze10Each} from "immer10Each"
 import {create as produceMutative} from "mutative";
 import {produce as produceMutativeCompat, setAutoFreeze as setAutoFreezeMutativeCompat} from "mutative-compat";
 import {bench, run, group, summary} from "mitata"
@@ -62,6 +63,7 @@ const immerProducers = {
   // immer8: produce8,
   immer9: produce9,
   immer10: produce10,
+  immer10Each: produce10Each,
   mutative: produceMutative,
   mutativeCompat: produceMutativeCompat
 }
@@ -74,6 +76,7 @@ const setAutoFreezes = {
   // immer8: setAutoFreeze8,
   immer9: setAutoFreeze9,
   immer10: setAutoFreeze10,
+  immer10Each: setAutoFreeze10Each,
   mutative: () => {},
   mutativeCompat: setAutoFreezeMutativeCompat
 }
@@ -130,7 +133,6 @@ const createImmerReducer = (produce) => {
           break
         case "test/removeItem":
           draft.largeArray.splice(action.payload, 1)
-
           break
         case "test/updateItem": {
           const item = draft.largeArray.find(

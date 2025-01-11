@@ -17,6 +17,9 @@ importers:
       immer10:
         specifier: npm:immer@10
         version: immer@10.1.1
+      immer10Each:
+        specifier: file:.yalc/immer
+        version: immer@file:.yalc/immer
       immer5:
         specifier: npm:immer@5
         version: immer@5.3.6
@@ -70,6 +73,9 @@ packages:
 
   immer@9.0.21:
     resolution: {integrity: sha512-bc4NBHqOqSfRW7POMkHd51LvClaeMXpm8dx0e8oE2GORbq5aRK7Bxl4FyzVLdGtLmvLKL7BTDBG5ACQm4HWjTA==}
+
+  immer@file:.yalc/immer:
+    resolution: {directory: .yalc/immer, type: directory}
 
   isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
@@ -126,6 +132,8 @@ snapshots:
   immer@8.0.4: {}
 
   immer@9.0.21: {}
+
+  immer@file:.yalc/immer: {}
 
   isexe@2.0.0: {}
 
