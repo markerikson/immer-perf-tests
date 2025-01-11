@@ -181,7 +181,7 @@ function createBenchmarks() {
         function benchMethod() {
           setAutoFreezes[version](freeze)
           for (let i = 0; i < MAX; i++) {
-            reducers[version](initialState, actions[action](i))      
+            reducers[version](initialState, actions[action](5000))
           }
           setAutoFreezes[version](false)
         }
